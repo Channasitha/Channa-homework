@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
 })
 export class MenulistComponent {
 
+  parentsmsg =`The God tell childs that your parents was born now. please find them!`;
+  chldsend =``;
+
   fruits:String[] = ['apple', 'banana', 'grapes', 'mango', 'orange']
   values:string = '';
 
@@ -32,6 +35,11 @@ export class MenulistComponent {
 
     };
     this.values = v_data
+  }
+
+  // action get from child
+  showChildmsg(value: string) {
+    this.chldsend = `Hey day and mummy, i'm ` + value;
   }
 
 }

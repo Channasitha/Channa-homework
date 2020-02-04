@@ -1,4 +1,9 @@
 
+
 <p>Input value here</p>
 <input (keyup)="onKey($event)">
 <p>{{values}}</p>
+<h2>This is parent blog</h2>
+<p style="color:red;">{{chldsend}}</p>
+
+<app-menulistchild [chlmsg]="parentsmsg" (sendback)="showChildmsg($event)"></app-menulistchild>
