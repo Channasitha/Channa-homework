@@ -1,3 +1,8 @@
 <h3>This is child home</h3>
 <h4>{{chlmsg}}</h4>
 <button style="background-color: aquamarine;" (click)="tellparent(true)"  [disabled]="action">Who am i?</button>
+<ul>
+    <li *ngFor="let item of items; let i = index; let odd = odd" [ngClass]="{ odd: odd }" >
+      {{   odd? '' : i + ' . ' + item   }}
+    </li>
+  </ul>
